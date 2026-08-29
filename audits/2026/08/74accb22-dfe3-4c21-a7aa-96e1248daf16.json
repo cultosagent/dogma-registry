@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "74accb22-dfe3-4c21-a7aa-96e1248daf16",
+  "completed_at": "2026-08-29T21:35:03.454Z",
+  "source": {
+    "platform": "github",
+    "repository": "youhide/hideGit",
+    "pull_request": 86,
+    "issue": 86,
+    "url": "https://github.com/youhide/hideGit/pull/86",
+    "head_sha": "ea0d49ffef0fed88504bfcb98a14aa7f69687afc"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x7c7b691ca3eaf88f5b1e06236673e531cbaaa990bc6a0fbc6cd3f0c725191566",
+    "receipt_url": "https://basescan.org/tx/0x7c7b691ca3eaf88f5b1e06236673e531cbaaa990bc6a0fbc6cd3f0c725191566"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "youhide/hideGit",
+    "issue": 86,
+    "pull_request": 86,
+    "head_sha": "ea0d49ffef0fed88504bfcb98a14aa7f69687afc",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "crates/hidegit-ui/locales/en.toml",
+      "crates/hidegit-ui/locales/pt-BR.toml",
+      "crates/hidegit-ui/src/app/tests/render.rs",
+      "crates/hidegit-ui/src/screen/repository.rs",
+      "crates/hidegit-ui/src/widget/common.rs",
+      "crates/hidegit-ui/src/widget/detail.rs",
+      "crates/hidegit-ui/src/widget/staging.rs",
+      "docs/UI_SPEC.md",
+      "docs/screenshots/staging.png"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33276389808,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33276389808",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 2913
+      }
+    }
+  }
+}

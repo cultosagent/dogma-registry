@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c4fa7528-f092-41bc-be91-d44a3fdb6bf7",
+  "completed_at": "2026-08-29T20:43:21.937Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x07c36715db926b38e6f62501b871e6e6e2ca04238b3fa8e2af38d4826c1293bd",
+    "receipt_url": "https://basescan.org/tx/0x07c36715db926b38e6f62501b871e6e6e2ca04238b3fa8e2af38d4826c1293bd"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Pull request directly contradicts issue acceptance criteria by relaxing settlement guard instead of confirming both requirements.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard bypassed - contradicts issue requirements",
+        "consequence": "Changes logic from requiring both delivery AND verification to requiring only one OR the other, directly violating the acceptance criterion to confirm both are required."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33274156058,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33274156058",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 2210
+      }
+    }
+  }
+}

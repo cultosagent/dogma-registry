@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "3ef1d1c3-67a0-4436-8a5c-2e58cdd35a41",
+  "completed_at": "2026-08-29T20:51:17.048Z",
+  "source": {
+    "platform": "github",
+    "repository": "react/react",
+    "pull_request": 37403,
+    "issue": 37403,
+    "url": "https://github.com/react/react/pull/37403",
+    "head_sha": "3dda1b1b53f77ce3de67d1151dff5d0b70166b11"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xdb7ced3816450ce15f8e829ae253c1d2725717855b89fb79d0d372a8463ab409",
+    "receipt_url": "https://basescan.org/tx/0xdb7ced3816450ce15f8e829ae253c1d2725717855b89fb79d0d372a8463ab409"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "react/react",
+    "issue": 37403,
+    "pull_request": 37403,
+    "head_sha": "3dda1b1b53f77ce3de67d1151dff5d0b70166b11",
+    "verdict": "approve-ready",
+    "summary": "Clean bug fix that aligns hydration behavior with mount behavior for embed elements, with appropriate test coverage.",
+    "findings": [],
+    "reviewed_files": [
+      "packages/react-dom-bindings/src/client/ReactDOMComponent.js",
+      "packages/react-dom/src/__tests__/ReactDOMEventListener-test.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33274491856,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33274491856",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 2896
+      }
+    }
+  }
+}

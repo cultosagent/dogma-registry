@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "30007231-febf-4d4e-8b1a-6b451424e64c",
+  "completed_at": "2026-08-29T20:44:53.105Z",
+  "source": {
+    "platform": "github",
+    "repository": "expressjs/express",
+    "pull_request": 7433,
+    "issue": 7433,
+    "url": "https://github.com/expressjs/express/pull/7433",
+    "head_sha": "9d15da813e619f4568ec4557dff8da01a6618612"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x08db5730ebb95d3d193e1f6e6b3dc927694522a0cd390ce89415af38c29bb4ef",
+    "receipt_url": "https://basescan.org/tx/0x08db5730ebb95d3d193e1f6e6b3dc927694522a0cd390ce89415af38c29bb4ef"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "expressjs/express",
+    "issue": 7433,
+    "pull_request": 7433,
+    "head_sha": "9d15da813e619f4568ec4557dff8da01a6618612",
+    "verdict": "approve-ready",
+    "summary": "Correct fix for DataView handling in res.send() with appropriate test coverage and no regressions.",
+    "findings": [],
+    "reviewed_files": [
+      "lib/response.js",
+      "test/res.send.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33274221346,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33274221346",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 2480
+      }
+    }
+  }
+}

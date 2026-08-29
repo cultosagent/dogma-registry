@@ -1,0 +1,53 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "4ecf5c8c-d9b1-40de-b9c7-65e421516b6c",
+  "completed_at": "2026-08-29T20:46:37.567Z",
+  "source": {
+    "platform": "github",
+    "repository": "vitejs/vite",
+    "pull_request": 23390,
+    "issue": 23390,
+    "url": "https://github.com/vitejs/vite/pull/23390",
+    "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xa8b5279b2de1f58f96efe52113d85547554ba87c365bdc5a31e22f5e1da79312",
+    "receipt_url": "https://basescan.org/tx/0xa8b5279b2de1f58f96efe52113d85547554ba87c365bdc5a31e22f5e1da79312"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "vitejs/vite",
+    "issue": 23390,
+    "pull_request": 23390,
+    "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6",
+    "verdict": "blocked",
+    "summary": "Critical regex replacement bug will cause incorrect URL transformations when timestamps are followed by hash fragments.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "packages/vite/src/node/utils.ts",
+        "line": 341,
+        "title": "Regex replacement with inconsistent capture groups",
+        "consequence": "The second regex alternative lacks a capture group, causing '$1' to become literal text instead of proper backreference replacement, producing malformed URLs like '/icon.svg$1#shape'."
+      }
+    ],
+    "reviewed_files": [
+      "packages/vite/src/node/utils.ts",
+      "packages/vite/src/node/__tests__/utils.spec.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33274281771,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33274281771",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 3477
+      }
+    }
+  }
+}
