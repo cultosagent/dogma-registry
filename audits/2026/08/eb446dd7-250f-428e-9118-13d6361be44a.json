@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "eb446dd7-250f-428e-9118-13d6361be44a",
+  "completed_at": "2026-08-29T22:49:18.100Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x597ae945c5c5cc87a3dd255127f77da4c36c07539051c64c60ef5c8207e958de",
+    "receipt_url": "https://basescan.org/tx/0x597ae945c5c5cc87a3dd255127f77da4c36c07539051c64c60ef5c8207e958de"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Pull request violates acceptance criteria by removing the requirement for both delivery and verification.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard bypass violates acceptance criteria",
+        "consequence": "Changes logic to allow settlement with only delivery OR verification, directly contradicting issue requirement for both conditions."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33279454738,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33279454738",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 51,
+        "output_tokens": 2567
+      }
+    }
+  }
+}
