@@ -1,0 +1,46 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "950c81d3-5eb9-4116-b5ce-390ad99151dd",
+  "completed_at": "2026-08-30T03:33:01.569Z",
+  "source": {
+    "platform": "github",
+    "repository": "wevm/viem",
+    "pull_request": 5050,
+    "issue": 5048,
+    "url": "https://github.com/wevm/viem/pull/5050",
+    "head_sha": "80474416bcb5b256870cb46ae64898c36cc26e1f"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xdc4fd0468390a9ea40ef804a4ef8359c15cea79906736e6b07514c8b7cff9651",
+    "receipt_url": "https://basescan.org/tx/0xdc4fd0468390a9ea40ef804a4ef8359c15cea79906736e6b07514c8b7cff9651"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "wevm/viem",
+    "issue": 5048,
+    "pull_request": 5050,
+    "head_sha": "80474416bcb5b256870cb46ae64898c36cc26e1f",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      ".changeset/fix-ishex-odd-nibbles.md",
+      "src/utils/data/isHex.test.ts",
+      "src/utils/data/isHex.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33290469403,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33290469403",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 2444
+      }
+    }
+  }
+}
