@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c65cdfae-fa51-4efa-b9b3-76d4715543e2",
+  "completed_at": "2026-08-30T08:29:41.268Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x02cdc189c03965ca386a96fea1e86c478b2206a923300058acdafdb556d98309",
+    "receipt_url": "https://basescan.org/tx/0x02cdc189c03965ca386a96fea1e86c478b2206a923300058acdafdb556d98309"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Pull request contradicts acceptance criteria by removing requirement for both delivery and verification.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Logic change violates 'both required' criterion",
+        "consequence": "Settlement bypass allows completion with either delivery OR verification instead of requiring both."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33301662512,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33301662512",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 2384
+      }
+    }
+  }
+}
