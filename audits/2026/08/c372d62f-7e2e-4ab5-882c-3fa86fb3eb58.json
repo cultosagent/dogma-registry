@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c372d62f-7e2e-4ab5-882c-3fa86fb3eb58",
+  "completed_at": "2026-08-30T08:49:59.443Z",
+  "source": {
+    "platform": "github",
+    "repository": "shapeshift/website-frontend",
+    "pull_request": 99,
+    "issue": 98,
+    "url": "https://github.com/shapeshift/website-frontend/pull/99",
+    "head_sha": "5962c0327122a1c0efefe18b4ace567678f190da"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xa7c6c35f7b3b6ac254fb4f23da635a6fe3c35626aeb3474143c436ff729510b6",
+    "receipt_url": "https://basescan.org/tx/0xa7c6c35f7b3b6ac254fb4f23da635a6fe3c35626aeb3474143c436ff729510b6"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "shapeshift/website-frontend",
+    "issue": 98,
+    "pull_request": 99,
+    "head_sha": "5962c0327122a1c0efefe18b4ace567678f190da",
+    "verdict": "approve-ready",
+    "summary": "Clean implementation adding Developers navigation that fully satisfies all acceptance criteria with no material defects.",
+    "findings": [],
+    "reviewed_files": [
+      "app/[lang]/_components/Footer.tsx",
+      "app/[lang]/_components/header/DesktopHeader.tsx",
+      "app/[lang]/_components/header/DevelopersExpand.tsx",
+      "app/[lang]/_components/header/MobileHeader.tsx",
+      "app/[lang]/_utils/constants.tsx",
+      "app/[lang]/_utils/dictionary/developers.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33302500204,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33302500204",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 30,
+        "output_tokens": 3203
+      }
+    }
+  }
+}
