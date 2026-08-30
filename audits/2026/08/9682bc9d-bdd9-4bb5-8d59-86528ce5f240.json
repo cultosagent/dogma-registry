@@ -1,0 +1,47 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "9682bc9d-bdd9-4bb5-8d59-86528ce5f240",
+  "completed_at": "2026-08-30T03:34:31.479Z",
+  "source": {
+    "platform": "github",
+    "repository": "wevm/wagmi",
+    "pull_request": 5235,
+    "issue": 5235,
+    "url": "https://github.com/wevm/wagmi/pull/5235",
+    "head_sha": "8eaa20af7a9ce1003a62389d089783ffe60b0a9e"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x7659f3f108089db0293483dcdf08683d363c2d050452571cbacdce8241ab5d6c",
+    "receipt_url": "https://basescan.org/tx/0x7659f3f108089db0293483dcdf08683d363c2d050452571cbacdce8241ab5d6c"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "wevm/wagmi",
+    "issue": 5235,
+    "pull_request": 5235,
+    "head_sha": "8eaa20af7a9ce1003a62389d089783ffe60b0a9e",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "packages/core/src/actions/reconnect.ts",
+      "packages/core/src/createConfig.ts",
+      "packages/core/src/actions/reconnect.test.ts",
+      "packages/core/src/createConfig.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33290523726,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33290523726",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 3250
+      }
+    }
+  }
+}
