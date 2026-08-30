@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c5d62fe3-52c7-4d9d-b5f5-db12ea3ec064",
+  "completed_at": "2026-08-30T08:15:34.671Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xc079e051ac7d1663a6095a9cfc0bf7ba07fafb51833f7b11ce28896c946fc5f5",
+    "receipt_url": "https://basescan.org/tx/0xc079e051ac7d1663a6095a9cfc0bf7ba07fafb51833f7b11ce28896c946fc5f5"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Pull request introduces settlement bypass that directly contradicts issue requirements.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard relaxed against issue requirements",
+        "consequence": "Allows settlement with incomplete verification, directly contradicting issue #2 requirement that both delivery and verification must be confirmed as required."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33301086645,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33301086645",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 2279
+      }
+    }
+  }
+}
