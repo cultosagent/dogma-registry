@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.paid-calibration.v1",
+  "created_at": "2026-08-30T03:38:39Z",
+  "network": "eip155:8453",
+  "price": "0.20 USDC",
+  "skill_commit": "46bc52d3c43a7c2c88c2d7c6dbb26bc883c5a925",
+  "audits": [
+    {
+      "repository": "vitejs/vite",
+      "pull_request": 23390,
+      "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6",
+      "verdict": "approve-ready",
+      "audit": "d1f38a56-24bd-408c-a9e1-0664a8fc24a9",
+      "transaction": "0x813255553761262d0c4d52c326f33e5cb142c248fefe45bfa74cb1c868b77e56"
+    },
+    {
+      "repository": "wevm/viem",
+      "pull_request": 5050,
+      "head_sha": "80474416bcb5b256870cb46ae64898c36cc26e1f",
+      "verdict": "approve-ready",
+      "audit": "950c81d3-5eb9-4116-b5ce-390ad99151dd",
+      "transaction": "0xdc4fd0468390a9ea40ef804a4ef8359c15cea79906736e6b07514c8b7cff9651"
+    },
+    {
+      "repository": "wevm/wagmi",
+      "pull_request": 5235,
+      "head_sha": "8eaa20af7a9ce1003a62389d089783ffe60b0a9e",
+      "verdict": "approve-ready",
+      "audit": "9682bc9d-bdd9-4bb5-8d59-86528ce5f240",
+      "transaction": "0x7659f3f108089db0293483dcdf08683d363c2d050452571cbacdce8241ab5d6c"
+    },
+    {
+      "repository": "rainbow-me/rainbowkit",
+      "pull_request": 2687,
+      "head_sha": "9a2c7ae3246f8ffb1b2eb24159a6a341f256a155",
+      "verdict": "approve-ready",
+      "audit": "33cdbde4-eb12-453c-b1a5-f18f045d9d50",
+      "transaction": "0x71284d9644e1261b07495fd3001d8fb89bccf7bef3abb2550533909ae59d23b5"
+    },
+    {
+      "repository": "aeonfun/aeon",
+      "pull_request": 986,
+      "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459",
+      "verdict": "approve-ready",
+      "audit": "272dc1f5-beda-4f24-933e-c5c42ce67e60",
+      "transaction": "0xf8d344ae757e85e7def121ad6b9d59df2125abad484966fe8503a0d8b82cc313"
+    }
+  ]
+}
