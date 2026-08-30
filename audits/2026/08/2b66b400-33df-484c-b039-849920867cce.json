@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "2b66b400-33df-484c-b039-849920867cce",
+  "completed_at": "2026-08-30T09:14:16.136Z",
+  "source": {
+    "platform": "github",
+    "repository": "aeonfun/aeon",
+    "pull_request": 986,
+    "issue": 986,
+    "url": "https://github.com/aeonfun/aeon/pull/986",
+    "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x89d613dd19f2dac01d3701960bbfd803ef0e8d0d7d86ee80f19ea00f58faa5a1",
+    "receipt_url": "https://basescan.org/tx/0x89d613dd19f2dac01d3701960bbfd803ef0e8d0d7d86ee80f19ea00f58faa5a1"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "aeonfun/aeon",
+    "issue": 986,
+    "pull_request": 986,
+    "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459",
+    "verdict": "approve-ready",
+    "summary": "Security fix correctly addresses cross-origin vulnerability between loopback aliases with robust validation and comprehensive test coverage.",
+    "findings": [],
+    "reviewed_files": [
+      "apps/dashboard/lib/security/api-gate.ts",
+      "apps/dashboard/lib/security/api-gate.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33303468787,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33303468787",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 3602
+      }
+    }
+  }
+}
