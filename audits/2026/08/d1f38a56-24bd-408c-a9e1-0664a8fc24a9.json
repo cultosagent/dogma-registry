@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "d1f38a56-24bd-408c-a9e1-0664a8fc24a9",
+  "completed_at": "2026-08-30T03:31:36.966Z",
+  "source": {
+    "platform": "github",
+    "repository": "vitejs/vite",
+    "pull_request": 23390,
+    "issue": 23390,
+    "url": "https://github.com/vitejs/vite/pull/23390",
+    "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x813255553761262d0c4d52c326f33e5cb142c248fefe45bfa74cb1c868b77e56",
+    "receipt_url": "https://basescan.org/tx/0x813255553761262d0c4d52c326f33e5cb142c248fefe45bfa74cb1c868b77e56"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "vitejs/vite",
+    "issue": 23390,
+    "pull_request": 23390,
+    "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6",
+    "verdict": "approve-ready",
+    "summary": "The regex fix correctly handles timestamp query removal when followed by hash fragments without breaking existing functionality.",
+    "findings": [],
+    "reviewed_files": [
+      "packages/vite/src/node/utils.ts",
+      "packages/vite/src/node/__tests__/utils.spec.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33290408714,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33290408714",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 3544
+      }
+    }
+  }
+}
