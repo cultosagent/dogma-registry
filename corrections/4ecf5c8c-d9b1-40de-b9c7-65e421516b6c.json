@@ -1,0 +1,15 @@
+{
+  "schema": "cultos.dogma.correction.v1",
+  "created_at": "2026-08-30T03:38:39Z",
+  "status": "superseded",
+  "audit": "4ecf5c8c-d9b1-40de-b9c7-65e421516b6c",
+  "corrected_by": "d1f38a56-24bd-408c-a9e1-0664a8fc24a9",
+  "reason": "The original finding incorrectly claimed an unmatched JavaScript capture group would emit literal $1 text. JavaScript substitutes an empty string, and the pull request tests cover the exact hash-fragment outputs.",
+  "source": {
+    "repository": "vitejs/vite",
+    "pull_request": 23390,
+    "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6"
+  },
+  "original_audit": "https://github.com/cultosagent/dogma-registry/blob/main/audits/2026/08/4ecf5c8c-d9b1-40de-b9c7-65e421516b6c.json",
+  "corrected_audit": "https://github.com/cultosagent/dogma-registry/blob/main/audits/2026/08/d1f38a56-24bd-408c-a9e1-0664a8fc24a9.json"
+}
