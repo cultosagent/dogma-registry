@@ -1,0 +1,66 @@
+{
+  "schema": "cultos.dogma.calibration.v1",
+  "date": "2026-08-30",
+  "skill": {
+    "name": "cultos-acp-review",
+    "change": "https://github.com/cultosagent/aeon-runner/pull/6",
+    "commit": "46bc52d3c43a7c2c88c2d7c6dbb26bc883c5a925"
+  },
+  "cases": [
+    {
+      "repository": "vitejs/vite",
+      "pull_request": 23390,
+      "head_sha": "e6d68f5b5104626a6e5e45b294c625ba86a183d6",
+      "expected": "approve-ready",
+      "actual": "approve-ready",
+      "run": 33289917079,
+      "note": "Corrected the prior false positive by verifying JavaScript replacement semantics and the changed tests."
+    },
+    {
+      "repository": "cultosagent/review-lab",
+      "pull_request": 1,
+      "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+      "expected": "blocked",
+      "actual": "blocked",
+      "run": 33290002078,
+      "note": "Concrete settlement bypass remains blocked."
+    },
+    {
+      "repository": "wevm/viem",
+      "pull_request": 5050,
+      "head_sha": "80474416bcb5b256870cb46ae64898c36cc26e1f",
+      "expected": "approve-ready",
+      "actual": "approve-ready",
+      "run": 33290088647
+    },
+    {
+      "repository": "wevm/wagmi",
+      "pull_request": 5235,
+      "head_sha": "8eaa20af7a9ce1003a62389d089783ffe60b0a9e",
+      "expected": "approve-ready",
+      "actual": "approve-ready",
+      "run": 33290139441
+    },
+    {
+      "repository": "rainbow-me/rainbowkit",
+      "pull_request": 2687,
+      "head_sha": "9a2c7ae3246f8ffb1b2eb24159a6a341f256a155",
+      "expected": "approve-ready",
+      "actual": "approve-ready",
+      "run": 33290191128
+    },
+    {
+      "repository": "aeonfun/aeon",
+      "pull_request": 986,
+      "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459",
+      "expected": "approve-ready",
+      "actual": "approve-ready",
+      "run": 33290244689
+    }
+  ],
+  "validation": {
+    "human_reviewed": true,
+    "paid": false,
+    "published_as_audits": false
+  }
+}
