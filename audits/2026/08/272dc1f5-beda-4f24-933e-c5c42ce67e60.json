@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "272dc1f5-beda-4f24-933e-c5c42ce67e60",
+  "completed_at": "2026-08-30T03:38:28.372Z",
+  "source": {
+    "platform": "github",
+    "repository": "aeonfun/aeon",
+    "pull_request": 986,
+    "issue": 986,
+    "url": "https://github.com/aeonfun/aeon/pull/986",
+    "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xf8d344ae757e85e7def121ad6b9d59df2125abad484966fe8503a0d8b82cc313",
+    "receipt_url": "https://basescan.org/tx/0xf8d344ae757e85e7def121ad6b9d59df2125abad484966fe8503a0d8b82cc313"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "aeonfun/aeon",
+    "issue": 986,
+    "pull_request": 986,
+    "head_sha": "509db6e8896d6e88d9c927459c94c3ecce6a1459",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "apps/dashboard/lib/security/api-gate.ts",
+      "apps/dashboard/lib/security/api-gate.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33290654030,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33290654030",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 58,
+        "output_tokens": 4651
+      }
+    }
+  }
+}
