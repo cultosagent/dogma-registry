@@ -1,0 +1,52 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "19b8f64b-184d-4353-8c54-835495abf444",
+  "completed_at": "2026-08-30T08:12:39.200Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xd441530b49939d8f5ea99c8d0860a621906da6130d0a878189ab24f8e22e0199",
+    "receipt_url": "https://basescan.org/tx/0xd441530b49939d8f5ea99c8d0860a621906da6130d0a878189ab24f8e22e0199"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Pull request directly violates issue requirements by relaxing settlement guard from AND to OR logic.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement bypass contradicts issue requirements",
+        "consequence": "The function now allows settlement with only delivery OR verification instead of requiring both, directly violating the acceptance criterion 'Confirm delivery and verification are both required'."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33300962825,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33300962825",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 2017
+      }
+    }
+  }
+}
