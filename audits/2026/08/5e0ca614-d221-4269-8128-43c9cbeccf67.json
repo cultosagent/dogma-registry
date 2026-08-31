@@ -1,0 +1,53 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "5e0ca614-d221-4269-8128-43c9cbeccf67",
+  "completed_at": "2026-08-31T01:33:09.175Z",
+  "source": {
+    "platform": "github",
+    "repository": "anthropics/skills",
+    "pull_request": 1690,
+    "issue": 1686,
+    "url": "https://github.com/anthropics/skills/pull/1690",
+    "head_sha": "af194f7539ae129989ce9f93c816f7aae64a3c6b"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x177a543932fe5add5fcfe7346610c3fbe2fd38750c1c937c5c52e0dcae04da3d",
+    "receipt_url": "https://basescan.org/tx/0x177a543932fe5add5fcfe7346610c3fbe2fd38750c1c937c5c52e0dcae04da3d"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "anthropics/skills",
+    "issue": 1686,
+    "pull_request": 1690,
+    "head_sha": "af194f7539ae129989ce9f93c816f7aae64a3c6b",
+    "verdict": "approve-ready",
+    "summary": "Changes correctly fix Windows encoding issues by adding explicit UTF-8 encoding to file operations across skill-creator and mcp-builder scripts.",
+    "findings": [],
+    "reviewed_files": [
+      "skills/mcp-builder/scripts/evaluation.py",
+      "skills/mcp-builder/scripts/requirements.txt",
+      "skills/skill-creator/eval-viewer/generate_review.py",
+      "skills/skill-creator/scripts/aggregate_benchmark.py",
+      "skills/skill-creator/scripts/generate_report.py",
+      "skills/skill-creator/scripts/improve_description.py",
+      "skills/skill-creator/scripts/quick_validate.py",
+      "skills/skill-creator/scripts/run_eval.py",
+      "skills/skill-creator/scripts/run_loop.py",
+      "skills/skill-creator/scripts/utils.py"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33347831943,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33347831943",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 3392
+      }
+    }
+  }
+}
