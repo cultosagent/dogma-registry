@@ -1,0 +1,56 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "872d9bc6-7228-4c30-809e-66ae9b9e9290",
+  "completed_at": "2026-08-31T14:44:43.101Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x863998d723ac7236a11b4de7e9dfc95dc223eb4bd2140f9bd5338e3fc8a2075f",
+    "asset": "0x1984edF491D3399FBc09E6d0856E01fF3721f952",
+    "symbol": "CULTOS",
+    "amount": "25912248102534735714618",
+    "decimals": 18,
+    "receipt_url": "https://basescan.org/tx/0x863998d723ac7236a11b4de7e9dfc95dc223eb4bd2140f9bd5338e3fc8a2075f"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Critical settlement bypass: PR allows settlement with only delivery OR verification instead of requiring both as specified in issue contract.",
+    "findings": [
+      {
+        "severity": "critical",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard bypass enables incomplete verification",
+        "consequence": "Function now returns true when only one condition is met, allowing settlement without complete verification process required by issue #2."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33404280518,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33404280518",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 51,
+        "output_tokens": 2747
+      }
+    }
+  }
+}
