@@ -1,0 +1,47 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "8799c45f-0e18-4ae0-a19b-436dd5cf4d4a",
+  "completed_at": "2026-08-31T00:35:54.741Z",
+  "source": {
+    "platform": "github",
+    "repository": "expressjs/express",
+    "pull_request": 7428,
+    "issue": 7427,
+    "url": "https://github.com/expressjs/express/pull/7428",
+    "head_sha": "e418c6f0f4aa4e3a3f93a4ff61e379511e8ece05"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xdbfc82d544f5ab47924f0d5bf41f492f8b67dec6df1f6978b2ef6f7b4d0cd138",
+    "receipt_url": "https://basescan.org/tx/0xdbfc82d544f5ab47924f0d5bf41f492f8b67dec6df1f6978b2ef6f7b4d0cd138"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "expressjs/express",
+    "issue": 7427,
+    "pull_request": 7428,
+    "head_sha": "e418c6f0f4aa4e3a3f93a4ff61e379511e8ece05",
+    "verdict": "approve-ready",
+    "summary": "Fix correctly addresses prototype restoration issue by capturing and restoring prototypes in app.handle callback wrapper.",
+    "findings": [],
+    "reviewed_files": [
+      "lib/application.js",
+      "test/app.use.js"
+    ],
+    "limitations": [
+      "Fix addresses prototype restoration but not mount event inheritance as noted in PR description"
+    ],
+    "run": {
+      "id": 33344958011,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33344958011",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 4302
+      }
+    }
+  }
+}
