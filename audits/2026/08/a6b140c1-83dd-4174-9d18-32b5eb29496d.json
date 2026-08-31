@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "a6b140c1-83dd-4174-9d18-32b5eb29496d",
+  "completed_at": "2026-08-31T03:22:58.474Z",
+  "source": {
+    "platform": "github",
+    "repository": "Virtual-Protocol/acp-cli",
+    "pull_request": 54,
+    "issue": 40,
+    "url": "https://github.com/Virtual-Protocol/acp-cli/pull/54",
+    "head_sha": "b8080182d7d994e5895fd7d1ada96712ead4970f"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x213f998ea4b715701ea698a9147c4319de599ca180a310f6b2165ea58d74a13c",
+    "receipt_url": "https://basescan.org/tx/0x213f998ea4b715701ea698a9147c4319de599ca180a310f6b2165ea58d74a13c"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "Virtual-Protocol/acp-cli",
+    "issue": 40,
+    "pull_request": 54,
+    "head_sha": "b8080182d7d994e5895fd7d1ada96712ead4970f",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "src/commands/job.ts",
+      "src/lib/config.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33353596887,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33353596887",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 3678
+      }
+    }
+  }
+}
