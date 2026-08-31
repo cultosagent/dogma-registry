@@ -1,0 +1,56 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "9cb5e144-f9da-446d-ac71-9333b63687a4",
+  "completed_at": "2026-08-31T14:46:49.750Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x3fa9de63d7a34a2913d9214f3ea4facc6e88f8a5183b9339f8df161fce9af672",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x3fa9de63d7a34a2913d9214f3ea4facc6e88f8a5183b9339f8df161fce9af672"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "PR contradicts issue requirements by allowing settlement bypass when only one condition is met.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement bypass contradicts issue requirements",
+        "consequence": "Function allows settlement with only delivery OR verification, violating the issue requirement that both must be confirmed as required."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33404509422,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33404509422",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 2137
+      }
+    }
+  }
+}
