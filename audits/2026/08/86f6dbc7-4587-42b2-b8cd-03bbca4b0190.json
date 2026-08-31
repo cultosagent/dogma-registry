@@ -1,0 +1,50 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "86f6dbc7-4587-42b2-b8cd-03bbca4b0190",
+  "completed_at": "2026-08-31T21:52:21.976Z",
+  "source": {
+    "platform": "github",
+    "repository": "anthropics/claude-code",
+    "pull_request": 84364,
+    "issue": 84302,
+    "url": "https://github.com/anthropics/claude-code/pull/84364",
+    "head_sha": "517c11f0319fc420079af55eddd6f1965363562a"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x0229695aa3d859fbf5f1f9ecaf545e23bf4ec9ae2b35424e39ace854fa7fdb67",
+    "asset": "0x1984edF491D3399FBc09E6d0856E01fF3721f952",
+    "symbol": "CULTOS",
+    "amount": "25912248102534735714618",
+    "decimals": 18,
+    "receipt_url": "https://basescan.org/tx/0x0229695aa3d859fbf5f1f9ecaf545e23bf4ec9ae2b35424e39ace854fa7fdb67"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "anthropics/claude-code",
+    "issue": 84302,
+    "pull_request": 84364,
+    "head_sha": "517c11f0319fc420079af55eddd6f1965363562a",
+    "verdict": "approve-ready",
+    "summary": "Security fix correctly implements fail-closed behavior for internal hook exceptions.",
+    "findings": [],
+    "reviewed_files": [
+      "plugins/hookify/hooks/pretooluse.py"
+    ],
+    "limitations": [
+      "This PR addresses internal exceptions but may not fully resolve external process kills mentioned in the issue"
+    ],
+    "run": {
+      "id": 33443435736,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33443435736",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 2084
+      }
+    }
+  }
+}
