@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "8661a870-22c9-4be0-9141-6c028445da18",
+  "completed_at": "2026-08-31T03:17:59.634Z",
+  "source": {
+    "platform": "github",
+    "repository": "expressjs/express",
+    "pull_request": 7430,
+    "issue": 7145,
+    "url": "https://github.com/expressjs/express/pull/7430",
+    "head_sha": "2151c6452d00e5b17f8e8a6cd86f72549e85f66c"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x3d231ce119e9e2803b7da7761f98b1c243d8cb710634b353b735bee2a0f41968",
+    "receipt_url": "https://basescan.org/tx/0x3d231ce119e9e2803b7da7761f98b1c243d8cb710634b353b735bee2a0f41968"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "expressjs/express",
+    "issue": 7145,
+    "pull_request": 7430,
+    "head_sha": "2151c6452d00e5b17f8e8a6cd86f72549e85f66c",
+    "verdict": "approve-ready",
+    "summary": "The implementation correctly removes the problematic MIME type lookup from res.set() and preserves backward compatibility through internal method migration.",
+    "findings": [],
+    "reviewed_files": [
+      "lib/response.js",
+      "test/res.send.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33353356402,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33353356402",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 2150
+      }
+    }
+  }
+}
