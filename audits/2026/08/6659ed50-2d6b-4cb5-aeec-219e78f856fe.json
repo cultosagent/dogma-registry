@@ -1,0 +1,45 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "6659ed50-2d6b-4cb5-aeec-219e78f856fe",
+  "completed_at": "2026-08-31T00:46:18.536Z",
+  "source": {
+    "platform": "github",
+    "repository": "expressjs/express",
+    "pull_request": 7430,
+    "issue": 7145,
+    "url": "https://github.com/expressjs/express/pull/7430",
+    "head_sha": "2151c6452d00e5b17f8e8a6cd86f72549e85f66c"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x88bf10d140ecc874dd49aa561eb8ced8e076b5d5520ad533b909b49c4b7234ec",
+    "receipt_url": "https://basescan.org/tx/0x88bf10d140ecc874dd49aa561eb8ced8e076b5d5520ad533b909b49c4b7234ec"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "expressjs/express",
+    "issue": 7145,
+    "pull_request": 7430,
+    "head_sha": "2151c6452d00e5b17f8e8a6cd86f72549e85f66c",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "lib/response.js",
+      "test/res.send.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33345475331,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33345475331",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 37,
+        "output_tokens": 3001
+      }
+    }
+  }
+}
