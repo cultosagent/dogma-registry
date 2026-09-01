@@ -1,0 +1,63 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "acfbcef1-f91a-4f8e-9d62-f3ba25f5b113",
+  "completed_at": "2026-09-01T15:04:38.493Z",
+  "source": {
+    "platform": "github",
+    "repository": "aeonfun/aeon",
+    "pull_request": 1008,
+    "issue": 1008,
+    "url": "https://github.com/aeonfun/aeon/pull/1008",
+    "head_sha": "1dedc4903bd090a70f4939acd5efcf9ee8fb33d4"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x0edc7f46e4aa44e6e789de6982a1f8ba9f2c8b7d2ff04114ba85a67e5f99b067",
+    "asset": "0x1984edF491D3399FBc09E6d0856E01fF3721f952",
+    "symbol": "CULTOS",
+    "amount": "23296110088803055492329",
+    "decimals": 18,
+    "receipt_url": "https://basescan.org/tx/0x0edc7f46e4aa44e6e789de6982a1f8ba9f2c8b7d2ff04114ba85a67e5f99b067"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "aeonfun/aeon",
+    "issue": 1008,
+    "pull_request": 1008,
+    "head_sha": "1dedc4903bd090a70f4939acd5efcf9ee8fb33d4",
+    "verdict": "discussion-needed",
+    "summary": "Well-architected PoC verification system with comprehensive security controls, but has a medium-severity cleanup race condition that should be addressed.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "scripts/vuln-poc-gate.sh",
+        "line": 126,
+        "title": "Test file cleanup race condition in foundry mode",
+        "consequence": "Private PoC tests could remain in target repository if script exits unexpectedly, risking accidental commit of sensitive test code."
+      }
+    ],
+    "reviewed_files": [
+      ".github/workflows/aeon.yml",
+      ".github/workflows/ci-tests.yml",
+      "scripts/skill_mode.sh",
+      "scripts/stage-vuln-scanner.sh",
+      "scripts/vuln-poc-gate.sh",
+      "scripts/tests/test_vuln_poc_gate.sh",
+      "scripts/tests/live_vuln_poc_gate.sh",
+      "skills/vuln-scanner/SKILL.md"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33523291758,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33523291758",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 72,
+        "output_tokens": 3901
+      }
+    }
+  }
+}
