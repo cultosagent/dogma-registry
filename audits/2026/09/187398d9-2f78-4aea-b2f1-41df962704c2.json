@@ -1,0 +1,51 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "187398d9-2f78-4aea-b2f1-41df962704c2",
+  "completed_at": "2026-09-02T17:53:51.929Z",
+  "source": {
+    "platform": "github",
+    "repository": "x402-foundation/x402",
+    "pull_request": 3344,
+    "issue": 3344,
+    "url": "https://github.com/x402-foundation/x402/pull/3344",
+    "head_sha": "eeb725d78f89246ebedcca506b405bec18155e93"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xb117d59f067ef6de56b3144241d67ef373164bbb7b838c804d4d6233c8fd9339",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xb117d59f067ef6de56b3144241d67ef373164bbb7b838c804d4d6233c8fd9339"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "x402-foundation/x402",
+    "issue": 3344,
+    "pull_request": 3344,
+    "head_sha": "eeb725d78f89246ebedcca506b405bec18155e93",
+    "verdict": "approve-ready",
+    "summary": "No material defects found. The build script modification follows reasonable patterns for monorepo dependency building.",
+    "findings": [],
+    "reviewed_files": [
+      "typescript/site/package.json"
+    ],
+    "limitations": [
+      "Cannot verify tsup configuration exists for all targeted packages without workspace context",
+      "Cannot confirm @x402/core package structure or build requirements"
+    ],
+    "run": {
+      "id": 33663809086,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33663809086",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 1563
+      }
+    }
+  }
+}
