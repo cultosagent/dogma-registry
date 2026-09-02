@@ -1,0 +1,56 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "6e36b625-15c2-4981-ae46-b889eb3ac0f7",
+  "completed_at": "2026-09-02T14:38:51.720Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x27f3c711e4619aaf30707ff2c39b283be8f593146657255a49713d3965d6a5af",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x27f3c711e4619aaf30707ff2c39b283be8f593146657255a49713d3965d6a5af"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "Change violates acceptance criteria by removing requirement for both delivery and verification.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard bypass violates acceptance criteria",
+        "consequence": "Settlement now allowed with only delivery OR verification instead of requiring both as specified in issue requirements."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33643311155,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33643311155",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 1553
+      }
+    }
+  }
+}
