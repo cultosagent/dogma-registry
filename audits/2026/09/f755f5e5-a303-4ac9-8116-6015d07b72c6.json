@@ -1,0 +1,48 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "f755f5e5-a303-4ac9-8116-6015d07b72c6",
+  "completed_at": "2026-09-03T15:51:05.744Z",
+  "source": {
+    "platform": "github",
+    "repository": "Virtual-Protocol/acp-cli",
+    "pull_request": 93,
+    "issue": 93,
+    "url": "https://github.com/Virtual-Protocol/acp-cli/pull/93",
+    "head_sha": "347d369311cab47915d5eb5b051ebc556b502279"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xce76163c25c400f86f1ae36029a17333846d2f2568f0b35563944846153c11ec",
+    "asset": "0x1984edF491D3399FBc09E6d0856E01fF3721f952",
+    "symbol": "CULTOS",
+    "amount": "23296110088803055492329",
+    "decimals": 18,
+    "receipt_url": "https://basescan.org/tx/0xce76163c25c400f86f1ae36029a17333846d2f2568f0b35563944846153c11ec"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "Virtual-Protocol/acp-cli",
+    "issue": 93,
+    "pull_request": 93,
+    "head_sha": "347d369311cab47915d5eb5b051ebc556b502279",
+    "verdict": "approve-ready",
+    "summary": "Clean implementation that addresses the silent Solana drop issue by adding explicit reporting across all output modes.",
+    "findings": [],
+    "reviewed_files": [
+      "src/commands/wallet.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 33774997318,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/33774997318",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 2205
+      }
+    }
+  }
+}
