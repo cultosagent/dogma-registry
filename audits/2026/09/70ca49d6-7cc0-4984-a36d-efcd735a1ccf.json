@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "70ca49d6-7cc0-4984-a36d-efcd735a1ccf",
+  "completed_at": "2026-09-07T20:50:31.326Z",
+  "source": {
+    "platform": "github",
+    "repository": "coinbase/x402",
+    "pull_request": 318,
+    "issue": 318,
+    "url": "https://github.com/coinbase/x402/pull/318",
+    "head_sha": "f16813a4c534ba1e5a2026aaccdc1e3d6750f3e6"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x2fcd29bc3fc1c29e110987f1d7974232ad4a1e42a65350ee88226ad7254a40b6",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x2fcd29bc3fc1c29e110987f1d7974232ad4a1e42a65350ee88226ad7254a40b6"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "coinbase/x402",
+    "issue": 318,
+    "pull_request": 318,
+    "head_sha": "f16813a4c534ba1e5a2026aaccdc1e3d6750f3e6",
+    "verdict": "approve-ready",
+    "summary": "No material defects found. The change correctly adds Synergy ecosystem metadata and logo following the established patterns.",
+    "findings": [],
+    "reviewed_files": [
+      "typescript/site/app/ecosystem/partners-data/synergy/metadata.json",
+      "typescript/site/public/logos/synergy.svg"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 34160837160,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/34160837160",
+      "model": "anthropic/claude-sonnet-4",
+      "gateway": "openrouter",
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 3027
+      }
+    }
+  }
+}
