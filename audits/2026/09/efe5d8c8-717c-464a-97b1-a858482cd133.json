@@ -1,0 +1,56 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "efe5d8c8-717c-464a-97b1-a858482cd133",
+  "completed_at": "2026-09-09T03:10:15.866Z",
+  "source": {
+    "platform": "github",
+    "repository": "cultosagent/review-lab",
+    "pull_request": 1,
+    "issue": 2,
+    "url": "https://github.com/cultosagent/review-lab/pull/1",
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x6eda15e168966528a2990e6d76d839a504ecbe1ef8f8807809b0c09f3e85e4b9",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x6eda15e168966528a2990e6d76d839a504ecbe1ef8f8807809b0c09f3e85e4b9"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "cultosagent/review-lab",
+    "issue": 2,
+    "pull_request": 1,
+    "head_sha": "052733732426e9f40ccd2553f123c1060322d86d",
+    "verdict": "blocked",
+    "summary": "The change replaces a logical AND with a logical OR in the settlement guard, allowing settlement when only one of delivery or verification is true.",
+    "findings": [
+      {
+        "severity": "critical",
+        "path": "src/receipt.js",
+        "line": 2,
+        "title": "Settlement guard bypass via AND-to-OR change",
+        "consequence": "canSettle({delivered:true, verified:false}) now returns true, permitting settlement without verification and directly contradicting the issue's requirement that both conditions be required."
+      }
+    ],
+    "reviewed_files": [
+      "src/receipt.js"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 34306036649,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/34306036649",
+      "model": "anthropic-claude-sonnet-5",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 2617,
+        "output_tokens": 693
+      }
+    }
+  }
+}
