@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c72f69de-b8da-4242-8b0a-7009f4914b67",
+  "completed_at": "2026-09-10T00:25:41.085Z",
+  "source": {
+    "platform": "github",
+    "repository": "alrimarleskovar/SolVerdict",
+    "pull_request": 9,
+    "issue": 9,
+    "url": "https://github.com/alrimarleskovar/SolVerdict/pull/9",
+    "head_sha": "7a4c3b25449b1d1d503d396e1772b118dbbdce4c"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x4e698a6f5ecf954ed59151447dc9793cd131af923379cfa25a6232a711771943",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x4e698a6f5ecf954ed59151447dc9793cd131af923379cfa25a6232a711771943"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "alrimarleskovar/SolVerdict",
+    "issue": 9,
+    "pull_request": 9,
+    "head_sha": "7a4c3b25449b1d1d503d396e1772b118dbbdce4c",
+    "verdict": "approve-ready",
+    "summary": "Simple devDependency version bump for @types/node with matching lockfile update; no material defects found.",
+    "findings": [],
+    "reviewed_files": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 34421203133,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/34421203133",
+      "model": "anthropic-claude-sonnet-5",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 4146,
+        "output_tokens": 176
+      }
+    }
+  }
+}
