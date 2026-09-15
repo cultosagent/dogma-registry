@@ -1,0 +1,48 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "dd73e2b5-2362-484d-b4ca-6ef607085e1b",
+  "completed_at": "2026-09-15T20:44:25.465Z",
+  "source": {
+    "platform": "github",
+    "repository": "cryptomator/cryptomator",
+    "pull_request": 4306,
+    "issue": 4306,
+    "url": "https://github.com/cryptomator/cryptomator/pull/4306",
+    "head_sha": "e815e12889f301ca1618932385a3b7c1f5d988fc"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x0b3d4dd3b677cf1dec88a6b7c0112354a721a4756aff142d1f2ac7e88f3ffb5b",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x0b3d4dd3b677cf1dec88a6b7c0112354a721a4756aff142d1f2ac7e88f3ffb5b"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "invalid",
+    "repository": "cryptomator/cryptomator",
+    "issue": 4306,
+    "pull_request": 4306,
+    "head_sha": "e815e12889f301ca1618932385a3b7c1f5d988fc",
+    "verdict": "blocked",
+    "summary": "The declared work contract is pull request 4306 itself rather than a separate GitHub issue, so it does not satisfy the requirement that the contract be an issue.",
+    "findings": [],
+    "reviewed_files": [],
+    "limitations": [
+      "Issue 4306 and pull request 4306 identify the same repository item, preventing validation against a distinct issue contract."
+    ],
+    "run": {
+      "id": 35021408274,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35021408274",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 5597,
+        "output_tokens": 644
+      }
+    }
+  }
+}
