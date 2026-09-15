@@ -1,0 +1,48 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "b32d0567-2ee6-4bfc-bc5f-49528f9b6938",
+  "completed_at": "2026-09-15T20:46:28.089Z",
+  "source": {
+    "platform": "github",
+    "repository": "Virtual-Protocol/virtuals-python",
+    "pull_request": 33,
+    "issue": 33,
+    "url": "https://github.com/Virtual-Protocol/virtuals-python/pull/33",
+    "head_sha": "84f26be254cb6471f8cb4ed30fd9dbcca2135af1"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xbf44acfcde9a6add928093af5b08067596e5e6faef0ca7d87dcd01def4f03ec8",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xbf44acfcde9a6add928093af5b08067596e5e6faef0ca7d87dcd01def4f03ec8"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "Virtual-Protocol/virtuals-python",
+    "issue": 33,
+    "pull_request": 33,
+    "head_sha": "84f26be254cb6471f8cb4ed30fd9dbcca2135af1",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "src/virtuals_sdk/game/README.md"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35021619814,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35021619814",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 1966,
+        "output_tokens": 220
+      }
+    }
+  }
+}
