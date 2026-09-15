@@ -1,0 +1,58 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "c6c6c50a-c640-43ee-a3a8-7e2dc6d628ff",
+  "completed_at": "2026-09-15T20:23:13.215Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 43,
+    "issue": 43,
+    "url": "https://github.com/thesmithdao/cultos/pull/43",
+    "head_sha": "922b252e1f701fbb11e9fecf160052c339891dd9"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xe92ab815f5327a1fa2b0ec67c167a53b27ae644e1484c424ddabafcc347c90eb",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xe92ab815f5327a1fa2b0ec67c167a53b27ae644e1484c424ddabafcc347c90eb"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 43,
+    "pull_request": 43,
+    "head_sha": "922b252e1f701fbb11e9fecf160052c339891dd9",
+    "verdict": "discussion-needed",
+    "summary": "The documentation work is present, but the requested exact validation of GitHub pull-request routes is not implemented or tested in this change.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "README.md",
+        "line": 139,
+        "title": "Requested pull-request route hardening is absent",
+        "consequence": "The pull request changes only documentation, so it cannot deliver or verify the issue's requested exact route validation and malformed GitHub pull-request routes remain unhardened by this change."
+      }
+    ],
+    "reviewed_files": [
+      "README.md",
+      "docs/index.md",
+      "docs/x402.md"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35019219124,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35019219124",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 3130,
+        "output_tokens": 1114
+      }
+    }
+  }
+}
