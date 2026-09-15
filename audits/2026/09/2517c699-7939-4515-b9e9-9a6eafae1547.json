@@ -1,0 +1,48 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "2517c699-7939-4515-b9e9-9a6eafae1547",
+  "completed_at": "2026-09-15T20:42:52.558Z",
+  "source": {
+    "platform": "github",
+    "repository": "cryptomator/cryptomator",
+    "pull_request": 4318,
+    "issue": 4318,
+    "url": "https://github.com/cryptomator/cryptomator/pull/4318",
+    "head_sha": "1cd1f725ad8a654357dbd4682f942b84d0f5d268"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x754ced8384a5bb973894b6314ea10ea9e4a3ea08498452c8f05e73181a810ce6",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x754ced8384a5bb973894b6314ea10ea9e4a3ea08498452c8f05e73181a810ce6"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "invalid",
+    "repository": "cryptomator/cryptomator",
+    "issue": 4318,
+    "pull_request": 4318,
+    "head_sha": "1cd1f725ad8a654357dbd4682f942b84d0f5d268",
+    "verdict": "blocked",
+    "summary": "The normalized input does not provide the pull request state, so it cannot confirm that the declared pull request is open as required.",
+    "findings": [],
+    "reviewed_files": [],
+    "limitations": [
+      "The pull_request object omits its open or closed state, and additional data cannot be fetched or inferred."
+    ],
+    "run": {
+      "id": 35021256477,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35021256477",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 15193,
+        "output_tokens": 553
+      }
+    }
+  }
+}
