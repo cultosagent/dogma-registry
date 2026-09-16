@@ -1,0 +1,64 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "4f97aad4-64cd-4953-b6f0-d83b31c88274",
+  "completed_at": "2026-09-16T21:36:32.280Z",
+  "source": {
+    "platform": "github",
+    "repository": "stakpak/agent",
+    "pull_request": 761,
+    "issue": 248,
+    "url": "https://github.com/stakpak/agent/pull/761",
+    "head_sha": "68f50fde736bac6f4d0f94c9cc4bb2e13812e0b0"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x34fd521a2cbb62c21658b5f03ec6e5eadc433947e7ad0781c72e6073f4a09b29",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x34fd521a2cbb62c21658b5f03ec6e5eadc433947e7ad0781c72e6073f4a09b29"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "stakpak/agent",
+    "issue": 248,
+    "pull_request": 761,
+    "head_sha": "68f50fde736bac6f4d0f94c9cc4bb2e13812e0b0",
+    "verdict": "discussion-needed",
+    "summary": "The integration suite leaves the API-key acceptance criterion uncovered and does not reliably verify server-side rejection of an untrusted client CA.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "libs/mcp/server/tests/mcp_server_integration.rs",
+        "line": 79,
+        "title": "API-key configuration is never tested",
+        "consequence": "The shared server helper always sets client to None, so every mode runs without an API key and regressions in the required with-API-key path will remain undetected."
+      },
+      {
+        "severity": "medium",
+        "path": "libs/mcp/server/tests/mcp_server_integration.rs",
+        "line": 489,
+        "title": "Wrong-CA test can fail before client authentication",
+        "consequence": "The client configured from the unrelated certificate chain can reject the server certificate first, allowing this test to pass even if the server incorrectly accepts client certificates signed by an untrusted CA."
+      }
+    ],
+    "reviewed_files": [
+      "libs/mcp/server/Cargo.toml",
+      "libs/mcp/server/tests/mcp_server_integration.rs"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35153245035,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35153245035",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 7956,
+        "output_tokens": 1312
+      }
+    }
+  }
+}
