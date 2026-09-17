@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "66d144f3-db36-490c-ace7-0b7e19137177",
+  "completed_at": "2026-09-17T19:03:44.857Z",
+  "source": {
+    "platform": "github",
+    "repository": "modelcontextprotocol/servers",
+    "pull_request": 4805,
+    "issue": 4804,
+    "url": "https://github.com/modelcontextprotocol/servers/pull/4805",
+    "head_sha": "723b12851e240a02cbe4e31a5f4ad1430c2c39e3"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x336befef6f44591219d55fa12c2252b69c7d59fcdb5a7806eb639a0074016084",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x336befef6f44591219d55fa12c2252b69c7d59fcdb5a7806eb639a0074016084"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "modelcontextprotocol/servers",
+    "issue": 4804,
+    "pull_request": 4805,
+    "head_sha": "723b12851e240a02cbe4e31a5f4ad1430c2c39e3",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "src/git/src/mcp_server_git/server.py",
+      "src/git/tests/test_server.py"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35262551664,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35262551664",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 3680,
+        "output_tokens": 401
+      }
+    }
+  }
+}
