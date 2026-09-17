@@ -1,0 +1,62 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "be844a6e-f86a-490f-a3a2-e088873a8b5a",
+  "completed_at": "2026-09-17T18:49:33.358Z",
+  "source": {
+    "platform": "github",
+    "repository": "modelcontextprotocol/servers",
+    "pull_request": 4783,
+    "issue": 4741,
+    "url": "https://github.com/modelcontextprotocol/servers/pull/4783",
+    "head_sha": "1f79bd8653b0d293dfd3b77a37b956f0d4113995"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xbbb07c78e3ec2e333fa0d4c89430dde2fb94921330bfee1460637a0d8491495a",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xbbb07c78e3ec2e333fa0d4c89430dde2fb94921330bfee1460637a0d8491495a"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "modelcontextprotocol/servers",
+    "issue": 4741,
+    "pull_request": 4783,
+    "head_sha": "1f79bd8653b0d293dfd3b77a37b956f0d4113995",
+    "verdict": "discussion-needed",
+    "summary": "The containers run as non-root, but the named USER values leave the stated Kubernetes runAsNonRoot use case unresolved.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "src/fetch/Dockerfile",
+        "line": 45,
+        "title": "Named USER still fails Kubernetes runAsNonRoot verification",
+        "consequence": "With runAsNonRoot enabled and no numeric runAsUser, Kubernetes cannot verify image users such as app or node as non-root, so all seven containers can still be rejected rather than started."
+      }
+    ],
+    "reviewed_files": [
+      "src/everything/Dockerfile",
+      "src/fetch/Dockerfile",
+      "src/filesystem/Dockerfile",
+      "src/git/Dockerfile",
+      "src/memory/Dockerfile",
+      "src/sequentialthinking/Dockerfile",
+      "src/time/Dockerfile"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35261015644,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35261015644",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 4866,
+        "output_tokens": 2155
+      }
+    }
+  }
+}
