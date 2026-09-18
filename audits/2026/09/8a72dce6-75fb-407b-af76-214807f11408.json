@@ -1,0 +1,49 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "8a72dce6-75fb-407b-af76-214807f11408",
+  "completed_at": "2026-09-18T20:13:57.077Z",
+  "source": {
+    "platform": "github",
+    "repository": "openai/openai-python",
+    "pull_request": 3901,
+    "issue": 3901,
+    "url": "https://github.com/openai/openai-python/pull/3901",
+    "head_sha": "838fc65d70865c6d2bdb92cdd2608eb0a3ffe809"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x89c70710ccba1d658ad2063743a21c3260749ac82808761df709a51dc15dc9da",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x89c70710ccba1d658ad2063743a21c3260749ac82808761df709a51dc15dc9da"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "openai/openai-python",
+    "issue": 3901,
+    "pull_request": 3901,
+    "head_sha": "838fc65d70865c6d2bdb92cdd2608eb0a3ffe809",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "src/openai/lib/streaming/chat/_completions.py",
+      "tests/lib/chat/test_stream_metadata_retention.py"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 35390258713,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35390258713",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 5672,
+        "output_tokens": 480
+      }
+    }
+  }
+}
