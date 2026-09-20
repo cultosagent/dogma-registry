@@ -1,0 +1,59 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "b80b0da8-c799-4839-8990-0857659922fb",
+  "completed_at": "2026-09-20T13:01:42.551Z",
+  "source": {
+    "platform": "github",
+    "repository": "solana-foundation/pay-skills",
+    "pull_request": 261,
+    "issue": 261,
+    "url": "https://github.com/solana-foundation/pay-skills/pull/261",
+    "head_sha": "082a2cefb622acf20e942a3b1d728d7e8c9fa17f"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xf6e358eddb5e16b3275907798d4acb1bed140d0780fcfc3387b84cda211f3c94",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xf6e358eddb5e16b3275907798d4acb1bed140d0780fcfc3387b84cda211f3c94"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "solana-foundation/pay-skills",
+    "issue": 261,
+    "pull_request": 261,
+    "head_sha": "082a2cefb622acf20e942a3b1d728d7e8c9fa17f",
+    "verdict": "discussion-needed",
+    "summary": "The OpenAPI sidecar does not fully satisfy the contract's bounded-input requirement.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "providers/cultos/devtools/openapi.json",
+        "line": 72,
+        "title": "Nested request payloads remain unbounded",
+        "consequence": "The x402 Lens body schema permits arbitrary properties without size or structural limits, so catalog validation and generated clients cannot enforce the issue's claimed bounded inputs."
+      }
+    ],
+    "reviewed_files": [
+      "providers/cultos/devtools/PAY.md",
+      "providers/cultos/devtools/openapi.json"
+    ],
+    "limitations": [
+      "Review was limited to the supplied issue, pull-request metadata, and patches."
+    ],
+    "run": {
+      "id": 35512226364,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/35512226364",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 5885,
+        "output_tokens": 1166
+      }
+    }
+  }
+}
