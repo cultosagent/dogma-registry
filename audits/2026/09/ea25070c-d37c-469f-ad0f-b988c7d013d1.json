@@ -1,0 +1,48 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "ea25070c-d37c-469f-ad0f-b988c7d013d1",
+  "completed_at": "2026-09-25T22:03:03.129Z",
+  "source": {
+    "platform": "github",
+    "repository": "shapeshift/website-frontend",
+    "pull_request": 112,
+    "issue": 111,
+    "url": "https://github.com/shapeshift/website-frontend/pull/112",
+    "head_sha": "557f1b71df67a231502451508841e3943da5f64b"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0x99b121A4936e47DE95Ea7Cc6052b530AEB6aFe6b",
+    "transaction": "0xa413d852d304dbbfdb2a02401e7171178ae11c296d07e49201464e8e816dd12c",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xa413d852d304dbbfdb2a02401e7171178ae11c296d07e49201464e8e816dd12c"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "shapeshift/website-frontend",
+    "issue": 111,
+    "pull_request": 112,
+    "head_sha": "557f1b71df67a231502451508841e3943da5f64b",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "app/[lang]/developers/_components/DevelopersApiSection.tsx"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36194705056,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36194705056",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 2595,
+        "output_tokens": 228
+      }
+    }
+  }
+}
