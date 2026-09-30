@@ -1,0 +1,83 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "7b5f2aae-0c11-4124-a226-35f48b47e667",
+  "completed_at": "2026-09-30T17:32:01.095Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "d252ae8e63c78ff07898f6c5ee5c8ba1de1d0d6e"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x19d7529fe14ff9357c3cdbe96ace5ff4372d835f97d9f59419fca410f1c49c7c",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x19d7529fe14ff9357c3cdbe96ace5ff4372d835f97d9f59419fca410f1c49c7c"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "d252ae8e63c78ff07898f6c5ee5c8ba1de1d0d6e",
+    "verdict": "blocked",
+    "summary": "The new handshake paths can report a completed first sale without verifiable evidence that the advertised payment settled.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 239,
+        "title": "HTTP handshake accepts a settlement with no transaction",
+        "consequence": "If awal exits successfully with a PAYMENT-RESPONSE containing success=true and a supported mainnet network but no transaction, the command returns success and announces a first sale without a receipt that can prove settlement."
+      },
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 165,
+        "title": "MQTT receipt accepts an unrelated USDC transfer",
+        "consequence": "A reported transaction containing any successful Base USDC Transfer is treated as the machine sale without checking its recipient or amount, so an unrelated transfer can make the command falsely announce settlement."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36751821089,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36751821089",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 40642,
+        "output_tokens": 5451
+      }
+    }
+  }
+}
