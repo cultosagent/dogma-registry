@@ -1,0 +1,76 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "3f3491f6-f9fc-45b7-a0a7-ce7d2e9b32c1",
+  "completed_at": "2026-09-30T15:11:28.189Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "e8df6dfef989763608fda3e550384c8f26ce5b40"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x5795e6d3bd0aa72593a4ae099a44272dbd78ff6e70f86c647040e1e442ccb923",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x5795e6d3bd0aa72593a4ae099a44272dbd78ff6e70f86c647040e1e442ccb923"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "e8df6dfef989763608fda3e550384c8f26ce5b40",
+    "verdict": "blocked",
+    "summary": "A new remote terminal-injection path must be fixed before approval.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 32,
+        "title": "Remote x402 fields are printed without sanitization",
+        "consequence": "A reachable endpoint can place terminal control sequences in fields such as network, asset, or payTo inside a valid PAYMENT-REQUIRED header, and cult check or cult handshake will write those sequences directly to the user's terminal."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36734610881,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36734610881",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 33103,
+        "output_tokens": 3618
+      }
+    }
+  }
+}
