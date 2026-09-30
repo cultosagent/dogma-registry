@@ -1,0 +1,90 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "9b960baa-bf67-4d1e-acec-8d7069dfba1b",
+  "completed_at": "2026-09-30T15:56:52.708Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "d3483fc6ddfdff038d2eb3a93d3bb842aedba0f9"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x57b0fa507771537bcd280c49fad0fc6bf36a36f21b188310325ae7526cb2d3ef",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x57b0fa507771537bcd280c49fad0fc6bf36a36f21b188310325ae7526cb2d3ef"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "d3483fc6ddfdff038d2eb3a93d3bb842aedba0f9",
+    "verdict": "blocked",
+    "summary": "The MQTT handshake can make a payment in check-only mode and can report a testnet purchase as the required real first sale.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 218,
+        "title": "MQTT --check can make a real payment",
+        "consequence": "Running cult handshake <topic> --check --yes with X402_MQTT_BUYER_KEY set ignores checkOnly and invokes x402-mqtt buy, unexpectedly spending funds despite the option promising only a listing check."
+      },
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 219,
+        "title": "Testnet machine purchases count as first sales",
+        "consequence": "A successful purchase from a default testnet machine returns true without checking its network, so cult reports handshake success even though no real mainnet first sale occurred."
+      },
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 236,
+        "title": "Non-v2 challenges pass the readiness gate",
+        "consequence": "A PAYMENT-REQUIRED payload declaring x402Version 1 but otherwise matching the schema produces only a warning, so passed returns true and the CLI declares an incompatible challenge ready for buyers."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36740377446,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36740377446",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 36893,
+        "output_tokens": 4046
+      }
+    }
+  }
+}
