@@ -1,0 +1,83 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "e0c293f0-5c3d-4371-abf6-199fb7c94e14",
+  "completed_at": "2026-09-30T16:03:41.112Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "9f62cc7afed1d89853d68743af7f645041d029a6"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x20ab49e18af4791903ede0ff3947edb84a5e7b31953ecf3e9f46f1d5e3712460",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x20ab49e18af4791903ede0ff3947edb84a5e7b31953ecf3e9f46f1d5e3712460"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "9f62cc7afed1d89853d68743af7f645041d029a6",
+    "verdict": "blocked",
+    "summary": "The fallback HTTP payment command permits shell injection, and the readiness check accepts missing Bazaar metadata.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 109,
+        "title": "Fallback payment command leaves the endpoint URL unquoted",
+        "consequence": "A reachable endpoint such as https://seller.example/data?x=$(id) is emitted as a command the user is instructed to run, causing the shell to execute the embedded substitution when that instruction is followed."
+      },
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 233,
+        "title": "Bazaar readiness accepts an empty or invalid extension",
+        "consequence": "A challenge containing extensions.bazaar as null or another non-metadata value is reported ready even though it lacks the Bazaar metadata required for marketplace discovery."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36741227745,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36741227745",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 38121,
+        "output_tokens": 3998
+      }
+    }
+  }
+}
