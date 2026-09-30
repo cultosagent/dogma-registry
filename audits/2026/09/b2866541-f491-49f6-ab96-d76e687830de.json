@@ -1,0 +1,76 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "b2866541-f491-49f6-ab96-d76e687830de",
+  "completed_at": "2026-09-30T15:53:25.375Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "0acd1d7e8e9273399a4ea6f1290f45d45b03e2a0"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x91997d85924347bc24d80a6588db84b683aa32d63420fef94300abec88a32952",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x91997d85924347bc24d80a6588db84b683aa32d63420fef94300abec88a32952"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "0acd1d7e8e9273399a4ea6f1290f45d45b03e2a0",
+    "verdict": "blocked",
+    "summary": "The handshake flow can report a testnet transaction as the promised real first sale.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/x402.ts",
+        "line": 236,
+        "title": "Testnet challenges pass the real-sale gate",
+        "consequence": "A default Base Sepolia or Solana Devnet endpoint produces only a warning, so handshake can pay test tokens and announce \"First sale done\" even though no economically real sale occurred and the settlement cannot establish the promised marketplace listing."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36739964518,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36739964518",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 36311,
+        "output_tokens": 3394
+      }
+    }
+  }
+}
