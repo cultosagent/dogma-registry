@@ -1,0 +1,78 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "d5db5645-3c31-4ceb-a209-8a99845fcdb0",
+  "completed_at": "2026-09-30T16:00:47.734Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "d448ea03e94e0f5c3cb3b761f15ba6ad1305c452"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xecf6f837c49d6aea41ff15e20476def1cf59935b22730beafc00e4bf65a94b94",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xecf6f837c49d6aea41ff15e20476def1cf59935b22730beafc00e4bf65a94b94"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "d448ea03e94e0f5c3cb3b761f15ba6ad1305c452",
+    "verdict": "discussion-needed",
+    "summary": "The builders accept the all-zero EVM address as a payout, allowing generation of sellers that cannot reliably receive proceeds.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "src/build.ts",
+        "line": 40,
+        "title": "Zero EVM payout address is accepted",
+        "consequence": "Supplying 0x0000000000000000000000000000000000000000 makes either builder succeed and directs generated payment terms to an address no seller controls, causing settlement failure or unrecoverable proceeds."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [
+      "Review was limited to the supplied normalized issue, pull request metadata, and patches."
+    ],
+    "run": {
+      "id": 36740881131,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36740881131",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 37879,
+        "output_tokens": 3412
+      }
+    }
+  }
+}
