@@ -1,0 +1,76 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "f25dc0d3-de0e-4bbb-aedb-5050381fa437",
+  "completed_at": "2026-09-30T15:41:04.494Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "a2dfa1df310c1b36771aac7364eaa59f858a7ebe"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x886b9a9d0e84e93560ba0f53594846108cf1186b6b048afeca7e5e0bdc2db2c6",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x886b9a9d0e84e93560ba0f53594846108cf1186b6b048afeca7e5e0bdc2db2c6"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "a2dfa1df310c1b36771aac7364eaa59f858a7ebe",
+    "verdict": "discussion-needed",
+    "summary": "The readiness gate can approve a payment scheme it does not support or fully validate.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 89,
+        "title": "Unsupported payment schemes still pass readiness",
+        "consequence": "A 402 challenge using a non-exact scheme with otherwise valid Base or Solana fields is only warned about, so cult check reports Ready for buyers despite explicitly not checking that payment scheme."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [],
+    "run": {
+      "id": 36738367591,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36738367591",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 35445,
+        "output_tokens": 5228
+      }
+    }
+  }
+}
