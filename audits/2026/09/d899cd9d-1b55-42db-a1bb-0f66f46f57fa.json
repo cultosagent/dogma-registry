@@ -1,0 +1,92 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "d899cd9d-1b55-42db-a1bb-0f66f46f57fa",
+  "completed_at": "2026-09-30T15:15:13.973Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "e496ff919c4df614f104a8f35bee9eeecdd29bc6"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x122857aabd721010b328493a32054a30305d7b784f84eab6daf0fb9ada5c61f9",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x122857aabd721010b328493a32054a30305d7b784f84eab6daf0fb9ada5c61f9"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "e496ff919c4df614f104a8f35bee9eeecdd29bc6",
+    "verdict": "blocked",
+    "summary": "The change accepts malformed Solana payout addresses that produce unusable sellers, and two readiness/setup paths do not fully satisfy the declared contract.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/build.ts",
+        "line": 47,
+        "title": "Solana validation accepts non-public-key values",
+        "consequence": "A value such as 44 lowercase z characters passes this regex but decodes to 33 bytes rather than a 32-byte Solana public key, so cult build x402 generates a seller whose payout cannot be used for payment."
+      },
+      {
+        "severity": "medium",
+        "path": "src/start.ts",
+        "line": 247,
+        "title": "Start does not install the pinned ACP version over an existing CLI",
+        "consequence": "When an older acp executable is already installed, cult start skips this pinned installation and leaves the user on the incompatible version that the release is intended to replace."
+      },
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 220,
+        "title": "Unknown Solana account status still passes readiness",
+        "consequence": "If the Solana RPC lookup times out while the payout lacks a USDC account, passed returns true and cult check reports the endpoint ready even though payments to that payout will fail."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [
+      "Review was limited to the normalized issue, pull-request metadata, and supplied patches; repository code and tests were not executed."
+    ],
+    "run": {
+      "id": 36735092469,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36735092469",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 33569,
+        "output_tokens": 4230
+      }
+    }
+  }
+}
