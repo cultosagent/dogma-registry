@@ -1,0 +1,78 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "b2c166f7-e6a5-429a-a1f1-664adbd1e678",
+  "completed_at": "2026-09-30T15:43:50.393Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "72a2ac692a94dfa19ea74e500846c961123be65f"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0x0333707742b5f5c77c3d42b1a52bded690168e42916812b35400b023e99a71d1",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x0333707742b5f5c77c3d42b1a52bded690168e42916812b35400b023e99a71d1"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "72a2ac692a94dfa19ea74e500846c961123be65f",
+    "verdict": "discussion-needed",
+    "summary": "The readiness check does not enforce the issue's Bazaar metadata criterion.",
+    "findings": [
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 230,
+        "title": "Missing Bazaar metadata still passes readiness",
+        "consequence": "An endpoint without extensions.bazaar receives only a warning, so passed() returns true and cult check prints Ready for buyers even though the declared Bazaar readiness criterion is unmet."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [
+      "Review was limited to the normalized issue, pull-request metadata, and supplied patches; repository code and tests were not executed."
+    ],
+    "run": {
+      "id": 36738778587,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36738778587",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 35824,
+        "output_tokens": 3220
+      }
+    }
+  }
+}
