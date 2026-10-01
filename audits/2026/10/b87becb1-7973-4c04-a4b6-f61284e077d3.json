@@ -1,0 +1,85 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "b87becb1-7973-4c04-a4b6-f61284e077d3",
+  "completed_at": "2026-10-01T18:09:55.938Z",
+  "source": {
+    "platform": "github",
+    "repository": "thesmithdao/cultos",
+    "pull_request": 62,
+    "issue": 62,
+    "url": "https://github.com/thesmithdao/cultos/pull/62",
+    "head_sha": "05054b3b60e5c6a60ee0491caa1775e494dcd10f"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xD1b1bc50Bf91672e6CDF6405B0881963D89b2887",
+    "transaction": "0xeba07dafcc366405bacf5735b2aa73960fea9d10e1b010a4375a7fc08950c068",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0xeba07dafcc366405bacf5735b2aa73960fea9d10e1b010a4375a7fc08950c068"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "thesmithdao/cultos",
+    "issue": 62,
+    "pull_request": 62,
+    "head_sha": "05054b3b60e5c6a60ee0491caa1775e494dcd10f",
+    "verdict": "blocked",
+    "summary": "The HTTP handshake can report a first sale without proof that a payment occurred, and the readiness check accepts malformed Bazaar metadata.",
+    "findings": [
+      {
+        "severity": "high",
+        "path": "src/handshake.ts",
+        "line": 292,
+        "title": "Seller-controlled response can falsely prove an HTTP sale",
+        "consequence": "A valid initial challenge followed by an awal result with status 200, paymentMade false, and a forged PAYMENT-RESPONSE naming any existing transaction passes this condition and is printed as a completed first sale even though no payment occurred."
+      },
+      {
+        "severity": "medium",
+        "path": "src/x402.ts",
+        "line": 257,
+        "title": "Truthy values are accepted as Bazaar metadata",
+        "consequence": "An endpoint with otherwise valid terms and bazaar.info.output set to a string such as \"yes\" passes readiness even though it supplies no usable discovery schema for marketplaces."
+      }
+    ],
+    "reviewed_files": [
+      "CHANGELOG.md",
+      "README.md",
+      "docs/architecture.svg",
+      "package-lock.json",
+      "package.json",
+      "src/acp.ts",
+      "src/bbs.ts",
+      "src/build.ts",
+      "src/builder.ts",
+      "src/cli.ts",
+      "src/doctor.ts",
+      "src/handshake.ts",
+      "src/prompt.ts",
+      "src/start.ts",
+      "src/x402.ts",
+      "test/acp.test.ts",
+      "test/bbs.test.ts",
+      "test/build.test.ts",
+      "test/handshake.test.ts",
+      "test/start.test.ts",
+      "test/x402.test.ts"
+    ],
+    "limitations": [
+      "Review was limited to the normalized issue, pull-request metadata, and supplied patches; repository code and tests were not executed."
+    ],
+    "run": {
+      "id": 36904549453,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/36904549453",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 43078,
+        "output_tokens": 4524
+      }
+    }
+  }
+}
