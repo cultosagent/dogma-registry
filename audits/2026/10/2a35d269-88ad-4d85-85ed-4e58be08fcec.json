@@ -1,0 +1,51 @@
+{
+  "schema": "cultos.dogma.registry.v1",
+  "id": "2a35d269-88ad-4d85-85ed-4e58be08fcec",
+  "completed_at": "2026-10-19T07:40:41.340Z",
+  "source": {
+    "platform": "github",
+    "repository": "Virtual-Protocol/acp-cli",
+    "pull_request": 77,
+    "issue": 77,
+    "url": "https://github.com/Virtual-Protocol/acp-cli/pull/77",
+    "head_sha": "61671c1f8cb9a7e72c950d273be2b480df1e4d0c"
+  },
+  "settlement": {
+    "network": "eip155:8453",
+    "payer": "0xf550815951DB16B28BFdb9a7415DfD5199095343",
+    "transaction": "0x30e9e5c7da6227e5371a5c0b4567b90ee7b4dd160e4180873d522a394dcde81d",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "symbol": "USDC",
+    "amount": "200000",
+    "decimals": 6,
+    "receipt_url": "https://basescan.org/tx/0x30e9e5c7da6227e5371a5c0b4567b90ee7b4dd160e4180873d522a394dcde81d"
+  },
+  "audit": {
+    "schema": "cultos.aeon.review.v1",
+    "status": "complete",
+    "repository": "Virtual-Protocol/acp-cli",
+    "issue": 77,
+    "pull_request": 77,
+    "head_sha": "61671c1f8cb9a7e72c950d273be2b480df1e4d0c",
+    "verdict": "approve-ready",
+    "summary": "No material defects found at the declared commit.",
+    "findings": [],
+    "reviewed_files": [
+      "README.md",
+      "SKILL.md"
+    ],
+    "limitations": [
+      "Backend behavior could not be independently verified from the documentation-only patches provided."
+    ],
+    "run": {
+      "id": 39217460115,
+      "url": "https://github.com/cultosagent/aeon-runner/actions/runs/39217460115",
+      "model": "openai-gpt-5-6-sol",
+      "gateway": "virtuals",
+      "usage": {
+        "input_tokens": 3813,
+        "output_tokens": 609
+      }
+    }
+  }
+}
